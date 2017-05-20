@@ -38,7 +38,7 @@ module.exports = {
 
     // html 模板插件
     new HtmlWebpackPlugin({
-        template: __dirname + '/app/index.tmpl.html'
+        template: __dirname + '/app/index.html'
     }),
 
     // 定义为生产环境，编译 React 时压缩到最小
@@ -50,17 +50,17 @@ module.exports = {
 
     // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
     new webpack.optimize.OccurenceOrderPlugin(),
-    
+
     new webpack.optimize.UglifyJsPlugin({
         compress: {
           //supresses warnings, usually from module minification
           warnings: false
         }
     }),
-    
+
     // 分离CSS和JS文件
-    new ExtractTextPlugin('/css/[name].[chunkhash:8].css'), 
-    
+    new ExtractTextPlugin('/css/[name].[chunkhash:8].css'),
+
     // 提供公共代码
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
