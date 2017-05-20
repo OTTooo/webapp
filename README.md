@@ -1,3 +1,3 @@
-# react-simple-o2o-demo
+# webapp
 
-React基础知识介绍，详情参考[这里](./docs/README.md)
+## 点击[这里](./docs/README.md),了解更多
